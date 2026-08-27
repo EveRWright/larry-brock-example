@@ -175,6 +175,9 @@ footer{
   display:block;margin:0 auto .85rem;
   background:#fff;border-radius:6px;padding:8px 12px;
 }
+.foot-credit{margin:.75rem 0 .35rem;color:rgba(255,255,255,.78);font-size:.82rem}
+.foot-credit a{color:#fff;font-weight:700;text-decoration:none}
+.foot-credit a:hover{text-decoration:underline}
 .foot-note{opacity:.7;margin-top:.35rem}
 
 @media(max-width:860px){
