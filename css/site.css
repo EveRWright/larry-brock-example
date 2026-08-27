@@ -163,17 +163,34 @@ nav a{
 /* —— Footer —— */
 footer{
   padding:1.35rem 1.25rem 1.6rem;
-  text-align:center;color:rgba(255,255,255,.62);font-size:.78rem;
+  color:rgba(255,255,255,.62);font-size:.78rem;
   background:#08141f;
 }
+.foot-inner{
+  width:min(1100px,100%);
+  margin:0 auto;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:1.25rem;
+}
+.foot-left{display:flex;flex-direction:column;gap:.45rem}
 .foot-logo{
   height:36px;width:auto;max-width:160px;
-  display:block;margin:0 auto .55rem;
+  display:block;
   background:#fff;border-radius:4px;padding:4px 8px;
 }
-.foot-credit{margin:.45rem 0 .2rem;color:rgba(255,255,255,.78);font-size:.78rem}
-.foot-credit a{color:#fff;font-weight:700;text-decoration:none}
-.foot-note{opacity:.65;margin:.25rem 0 0;font-size:.7rem}
+.foot-legal{margin:0;font-size:.75rem;color:rgba(255,255,255,.55);max-width:26rem}
+.foot-right{
+  display:flex;flex-direction:column;align-items:flex-end;gap:.35rem;
+  text-align:right;
+}
+.foot-credit{
+  margin:0;color:rgba(255,255,255,.85);font-size:.72rem;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+}
+.foot-texano img{
+  height:48px;width:auto;max-width:150px;display:block;
+}
+.foot-note{opacity:.65;margin:0;font-size:.68rem}
 
 @media(max-width:860px){
   .agenda-grid{grid-template-columns:repeat(2,1fr)}
@@ -185,4 +202,6 @@ footer{
   .agenda-grid{grid-template-columns:1fr}
   .hero{max-height:48vh}
   .wrap{width:calc(100% - 1.75rem)}
+  .foot-inner{flex-direction:column;align-items:flex-start}
+  .foot-right{align-items:flex-start;text-align:left}
 }
