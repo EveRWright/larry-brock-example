@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <!-- EXAMPLE banner: this is not the official Wix campaign site -->
   <div class="example-bar" role="note">
     EXAMPLE SITE · Not the official campaign page ·
     <a href="https://www.larrybrockfortexas.com" rel="noopener">larrybrockfortexas.com</a>
@@ -16,14 +15,12 @@
 
   <header class="top">
     <a class="brand" href="#top" aria-label="Larry Brock for Texas — home">
-      <span class="brand-star" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2.2l2.9 6.1 6.7.7-5 4.6 1.4 6.6L12 16.8 5.9 20.2 7.3 13.6 2.4 9l6.7-.7L12 2.2z"/></svg>
-      </span>
-      <span class="brand-name">Larry Brock</span>
+      <img src="assets/logo-larry-brock-nav.png" alt="Larry Brock" width="180" height="67">
     </a>
     <nav aria-label="Primary">
       <a href="#agenda">Agenda</a>
       <a href="#about">About</a>
+      <a href="#join">Join</a>
       <a class="btn" href="https://secure.winred.com/larry-brock-for-texas/donate-today" rel="noopener">Donate</a>
     </nav>
   </header>
@@ -31,6 +28,7 @@
   <main id="top">
     <section class="hero" aria-label="Campaign introduction">
       <video
+        id="hero-video"
         class="hero-video"
         autoplay
         muted
@@ -41,13 +39,15 @@
         <source src="assets/hero-cinematic.mp4" type="video/mp4">
       </video>
       <div class="hero-fade" aria-hidden="true"></div>
+
+      <button type="button" class="sound-gate" id="sound-gate" aria-label="Tap to enable sound">
+        <span class="sound-gate-icon" aria-hidden="true">♪</span>
+        <span>Tap for sound</span>
+      </button>
+
       <div class="hero-controls">
-        <button type="button" class="hero-btn" id="hero-sound" aria-pressed="false" title="Turn sound on">
-          <span class="hero-btn-label">Sound off</span>
-        </button>
-        <button type="button" class="hero-btn hero-btn-replay is-hidden" id="hero-replay" title="Replay intro">
-          <span class="hero-btn-label">Replay</span>
-        </button>
+        <button type="button" class="hero-btn" id="hero-sound" aria-pressed="false">Sound off</button>
+        <button type="button" class="hero-btn hero-btn-replay is-hidden" id="hero-replay">Replay</button>
       </div>
     </section>
 
@@ -63,42 +63,42 @@
               <svg viewBox="0 0 48 48" fill="none"><path d="M10 20h28v18H10V20Z" stroke="currentColor" stroke-width="2"/><path d="M16 20V14a8 8 0 0 1 16 0v6" stroke="currentColor" stroke-width="2"/><path d="M24 28v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
             <h3>Property Tax Relief</h3>
-            <p>Protect homeowners and small businesses from Austin’s tax squeeze.</p>
+            <p>Protect homeowners and small businesses from Austin’s tax squeeze. Families should keep more of what they earn.</p>
           </li>
           <li class="agenda-card">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2"/><path d="M24 10v28M10 24h28" stroke="currentColor" stroke-width="2"/><path d="M16 16c4 3 12 3 16 0M16 32c4-3 12-3 16 0" stroke="currentColor" stroke-width="2"/></svg>
             </span>
             <h3>Austin’s Belt</h3>
-            <p>Push back on overreach. Keep local control where Texans live and work.</p>
+            <p>Push back on overreach. Keep local control where Texans live, work, and raise their kids.</p>
           </li>
           <li class="agenda-card">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="12" width="28" height="24" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 20h16M16 26h10M16 32h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30 30l4 4 6-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <h3>Secure Elections</h3>
-            <p>One citizen, one vote — election integrity Texans can trust.</p>
+            <p>One citizen, one vote — election integrity Texans can trust from registration to certification.</p>
           </li>
           <li class="agenda-card">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v8M24 32v8M8 24h8M32 24h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/><path d="M14 14l4 4M30 30l4 4M34 14l-4 4M18 30l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
             <h3>Power &amp; Water</h3>
-            <p>Reliable grids and water — infrastructure that keeps Texas running.</p>
+            <p>Reliable grids and water — infrastructure that keeps North Texas running through heat, growth, and crisis.</p>
           </li>
           <li class="agenda-card">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><path d="M6 34h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 34V22l8-6 8 4 12-8v22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="34" r="3" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="34" r="3" stroke="currentColor" stroke-width="2"/></svg>
             </span>
             <h3>Roads &amp; Mobility</h3>
-            <p>Fix congestion and invest in the roads North Texas depends on.</p>
+            <p>Fix congestion and invest in the roads, corridors, and mobility HD-106 depends on every day.</p>
           </li>
           <li class="agenda-card">
             <span class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 8l14 6v10c0 10-6 16-14 18-8-2-14-8-14-18V14l14-6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18 24l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <h3>Judicial Accountability</h3>
-            <p>Courts that answer to the Constitution — and to the people of Texas.</p>
+            <p>Courts that answer to the Constitution — and to the people of Texas — not political fashion.</p>
           </li>
         </ul>
       </div>
@@ -106,53 +106,116 @@
 
     <section class="about" id="about">
       <div class="wrap about-grid">
-        <div>
-          <p class="section-kicker">About Larry</p>
+        <div class="about-photo">
+          <img src="assets/character_lock/02_navy_suit_jennifer.jpg" alt="Larry Brock" width="480" height="600">
+        </div>
+        <div class="about-copy-block">
+          <p class="section-kicker light">About Larry</p>
           <h2>Tested Leadership</h2>
-          <p class="about-copy">
+          <p>
             Retired Air Force Lieutenant Colonel. Fifth-generation Texan.
             Constitutional conservative — House first, Texas first.
           </p>
+          <p>
+            Larry Brock brings disciplined service, clear priorities, and a refusal to rubber-stamp
+            Austin’s belt. He stands with families, small businesses, and the rule of law —
+            the same values that built HD-106.
+          </p>
+          <ul class="about-points">
+            <li>U.S. Air Force — Lieutenant Colonel (Ret.)</li>
+            <li>Fifth-generation Texan · HD-106</li>
+            <li>Constitutional conservative · America First lane</li>
+          </ul>
           <a class="btn btn-wide" href="https://secure.winred.com/larry-brock-for-texas/donate-today" rel="noopener">Donate Today</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="join" id="join">
+      <div class="wrap join-grid">
+        <div>
+          <p class="section-kicker">Get involved</p>
+          <h2>Join the Fight</h2>
+          <p class="section-lede">This seat won’t defend itself. Chip in, share the message, and help put tested leadership in the Texas House.</p>
+        </div>
+        <div class="join-actions">
+          <a class="btn" href="https://secure.winred.com/larry-brock-for-texas/donate-today" rel="noopener">Donate</a>
+          <a class="btn btn-outline" href="https://www.larrybrockfortexas.com" rel="noopener">Official site</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <img class="foot-logo" src="assets/logo-larry-brock-official-on-white.png" alt="Larry Brock for Texas">
-    <p>Political advertising paid for by Larry Brock for Texas.</p>
-    <p class="foot-credit">Created by Michael + Eve · <a href="https://www.texanoai.com" rel="noopener">texanoai.com</a></p>
-    <p class="foot-note">Example build · official mark locked · agenda = published 2026 issues</p>
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-left">
+        <img class="foot-logo-larry" src="assets/logo-larry-brock-official-on-white.png" alt="Larry Brock for Texas">
+        <p class="foot-legal">Political advertising paid for by Larry Brock for Texas.</p>
+      </div>
+      <div class="foot-right">
+        <p class="foot-credit">Created by Michael + Eve</p>
+        <a class="foot-texano" href="https://www.texanoai.com" rel="noopener" title="TexanoAI">
+          <img src="assets/logo-texanoai.png" alt="TexanoAI" width="160" height="107">
+        </a>
+        <p class="foot-note">Example build · not for unauthorized reuse</p>
+      </div>
+    </div>
   </footer>
 
   <script>
-    const v = document.querySelector('.hero-video');
+    const v = document.getElementById('hero-video');
     const soundBtn = document.getElementById('hero-sound');
     const replayBtn = document.getElementById('hero-replay');
-    if (v && soundBtn && replayBtn) {
-      const setSoundUI = () => {
-        const on = !v.muted;
-        soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-        soundBtn.querySelector('.hero-btn-label').textContent = on ? 'Sound on' : 'Sound off';
-        soundBtn.title = on ? 'Mute' : 'Turn sound on';
-      };
-      soundBtn.addEventListener('click', () => {
-        v.muted = !v.muted;
-        if (!v.muted && v.paused && v.currentTime < 0.2) v.play().catch(() => {});
-        setSoundUI();
+    const gate = document.getElementById('sound-gate');
+
+    function setSoundUI() {
+      const on = !v.muted;
+      soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      soundBtn.textContent = on ? 'Sound on' : 'Sound off';
+      gate.classList.toggle('is-hidden', on);
+    }
+
+    async function enableSound() {
+      try {
+        v.muted = false;
+        v.volume = 1;
+        if (v.paused) await v.play();
+      } catch (e) {}
+      setSoundUI();
+    }
+
+    function disableSound() {
+      v.muted = true;
+      setSoundUI();
+    }
+
+    if (v && soundBtn && replayBtn && gate) {
+      gate.addEventListener('click', (e) => {
+        e.stopPropagation();
+        enableSound();
       });
-      replayBtn.addEventListener('click', () => {
+      soundBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (v.muted) enableSound();
+        else disableSound();
+      });
+      replayBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
         replayBtn.classList.add('is-hidden');
         v.currentTime = 0;
-        v.play().catch(() => {});
+        try { await v.play(); } catch (err) {}
       });
       v.addEventListener('play', () => replayBtn.classList.add('is-hidden'));
       v.addEventListener('ended', () => {
         v.pause();
         replayBtn.classList.remove('is-hidden');
       });
+      // First gesture on hero also unlocks audio (browser policy)
+      document.querySelector('.hero').addEventListener('click', () => {
+        if (v.muted) enableSound();
+      });
       setSoundUI();
+      v.play().catch(() => {});
     }
   </script>
 </body>
