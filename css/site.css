@@ -23,14 +23,14 @@ body{
 .top{
   position:sticky;top:0;z-index:30;
   display:flex;align-items:center;justify-content:space-between;
-  gap:1rem;padding:.7rem 1.35rem;
+  gap:1rem;padding:.45rem 1.25rem;
   background:#0B1C2C;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
+.brand{display:flex;align-items:center;text-decoration:none;line-height:0}
 .brand img{
-  height:46px;width:auto;max-width:min(240px,52vw);
+  height:36px;width:auto;max-width:min(200px,55vw);
   display:block;
-  background:#fff;border-radius:4px;padding:3px 7px;
 }
 nav{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;justify-content:flex-end}
 nav a{
@@ -49,11 +49,10 @@ nav a{
 .hero{
   position:relative;
   width:100%;
-  background:#000;
-  /* Match source ~1424×640; allow tall crop on narrow screens */
+  background:#0B1C2C;
   aspect-ratio:1424 / 640;
-  max-height:min(72vh,720px);
-  min-height:220px;
+  max-height:min(58vh,560px);
+  min-height:200px;
   overflow:hidden;
 }
 .hero-video,.hero-settle{
@@ -101,7 +100,7 @@ nav a{
 /* —— Agenda —— */
 .agenda{
   background:#f4f6f8;
-  padding:3.25rem 0 3.5rem;
+  padding:2.5rem 0 2.75rem;
 }
 .agenda-grid{
   list-style:none;margin:0;padding:0;
@@ -142,7 +141,7 @@ nav a{
 /* —— About —— */
 .about{
   background:#0B1C2C;
-  padding:3.25rem 0 3.5rem;
+  padding:2.5rem 0 2.75rem;
   color:#fff;
 }
 .about .section-kicker{color:#f0d5d8}
@@ -154,18 +153,18 @@ nav a{
 
 /* —— Footer —— */
 footer{
-  padding:2.25rem 1.25rem 2.75rem;
-  text-align:center;color:rgba(255,255,255,.62);font-size:.8rem;
+  padding:1.35rem 1.25rem 1.6rem;
+  text-align:center;color:rgba(255,255,255,.62);font-size:.78rem;
   background:#08141f;
 }
 .foot-logo{
-  height:68px;width:auto;max-width:260px;
-  display:block;margin:0 auto .85rem;
-  background:#fff;border-radius:6px;padding:8px 12px;
+  height:36px;width:auto;max-width:160px;
+  display:block;margin:0 auto .55rem;
+  background:#fff;border-radius:4px;padding:4px 8px;
 }
-.foot-credit{margin:.7rem 0 .3rem;color:rgba(255,255,255,.78)}
+.foot-credit{margin:.45rem 0 .2rem;color:rgba(255,255,255,.78);font-size:.78rem}
 .foot-credit a{color:#fff;font-weight:700;text-decoration:none}
-.foot-note{opacity:.7;margin-top:.35rem}
+.foot-note{opacity:.65;margin:.25rem 0 0;font-size:.7rem}
 
 @media(max-width:860px){
   .agenda-grid{grid-template-columns:repeat(2,1fr)}
