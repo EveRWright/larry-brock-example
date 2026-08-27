@@ -7,12 +7,45 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <main class="stage">
-    <img
-      class="logo"
-      src="assets/logo-larry-brock-official-on-white.png"
-      alt="Larry Brock for Texas"
+  <header class="top">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-larry-brock-official-on-white.png" alt="Larry Brock for Texas">
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a class="btn" href="https://secure.winred.com/larry-brock-for-texas/donate-today">Donate</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      playsinline
+      preload="auto"
+      poster="assets/hero_frame1_logo_white.png"
     >
-  </main>
+      <source src="assets/hero-intro.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+    <div class="hero-copy" id="about">
+      <p class="kicker">Texas · HD-106</p>
+      <h1>A <span>New Leadership</span><br>for Our Community</h1>
+      <p class="lede">Retired Air Force Lieutenant Colonel. Fifth-generation Texan. Constitutional conservative — House first.</p>
+    </div>
+  </section>
+
+  <footer>
+    <img class="foot-logo" src="assets/logo-larry-brock-official-on-white.png" alt="Larry Brock for Texas">
+    <p>Fresh build · logo locked · Jennifer preference stills in character lock</p>
+  </footer>
+  <script>
+    // Play once through to the homepage settle; hold last frame
+    const v = document.querySelector('.hero-video');
+    if (v) {
+      v.addEventListener('ended', () => { v.pause(); });
+    }
+  </script>
 </body>
 </html>
