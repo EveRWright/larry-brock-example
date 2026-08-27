@@ -1,6 +1,7 @@
-# Official logo — start here
+# SOLE CANON LOGO
 
-`logo-larry-brock-official.png`
-MD5: ee5a9fc0f0c03107cc86d877b382eb44
+`logo-larry-brock-official.png`  
+MD5 `43318f9fe907ad3063ff70be24a2ebfb`
 
-Byte-identical to locked Clean Logo. Do not alter.
+Exact bytes of the sealed official mark. Nothing else is logo.
+`logo-larry-brock-official-on-white.png` = same artwork on white plate for navy UI only.
