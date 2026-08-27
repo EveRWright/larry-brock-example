@@ -16,7 +16,10 @@
 
   <header class="top">
     <a class="brand" href="#top" aria-label="Larry Brock for Texas — home">
-      <img src="assets/logo-larry-brock-official-on-white.png" alt="Larry Brock for Texas" width="260" height="48">
+      <span class="brand-star" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2.2l2.9 6.1 6.7.7-5 4.6 1.4 6.6L12 16.8 5.9 20.2 7.3 13.6 2.4 9l6.7-.7L12 2.2z"/></svg>
+      </span>
+      <span class="brand-name">Larry Brock</span>
     </a>
     <nav aria-label="Primary">
       <a href="#agenda">Agenda</a>
@@ -38,6 +41,14 @@
         <source src="assets/hero-cinematic.mp4" type="video/mp4">
       </video>
       <div class="hero-fade" aria-hidden="true"></div>
+      <div class="hero-controls">
+        <button type="button" class="hero-btn" id="hero-sound" aria-pressed="false" title="Turn sound on">
+          <span class="hero-btn-label">Sound off</span>
+        </button>
+        <button type="button" class="hero-btn hero-btn-replay is-hidden" id="hero-replay" title="Replay intro">
+          <span class="hero-btn-label">Replay</span>
+        </button>
+      </div>
     </section>
 
     <section class="agenda" id="agenda">
@@ -116,12 +127,31 @@
 
   <script>
     const v = document.querySelector('.hero-video');
-    if (v) {
+    const soundBtn = document.getElementById('hero-sound');
+    const replayBtn = document.getElementById('hero-replay');
+    if (v && soundBtn && replayBtn) {
+      const setSoundUI = () => {
+        const on = !v.muted;
+        soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        soundBtn.querySelector('.hero-btn-label').textContent = on ? 'Sound on' : 'Sound off';
+        soundBtn.title = on ? 'Mute' : 'Turn sound on';
+      };
+      soundBtn.addEventListener('click', () => {
+        v.muted = !v.muted;
+        if (!v.muted && v.paused && v.currentTime < 0.2) v.play().catch(() => {});
+        setSoundUI();
+      });
+      replayBtn.addEventListener('click', () => {
+        replayBtn.classList.add('is-hidden');
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      });
+      v.addEventListener('play', () => replayBtn.classList.add('is-hidden'));
       v.addEventListener('ended', () => {
         v.pause();
-        // Hold settle frame; swap poster cue for browsers that flash
-        v.setAttribute('poster', 'assets/hero-cinematic-poster.jpg');
+        replayBtn.classList.remove('is-hidden');
       });
+      setSoundUI();
     }
   </script>
 </body>

@@ -27,10 +27,18 @@ body{
   background:#0B1C2C;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
-.brand img{
-  height:46px;width:auto;max-width:min(240px,52vw);
-  display:block;
-  background:#fff;border-radius:4px;padding:3px 7px;
+.brand{
+  display:flex;align-items:center;gap:.55rem;
+  text-decoration:none;color:#fff;
+}
+.brand-star{
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#C41E3A;line-height:0;
+}
+.brand-name{
+  font-family:Montserrat,Inter,system-ui,sans-serif;
+  font-weight:800;font-size:.95rem;letter-spacing:.06em;
+  text-transform:uppercase;
 }
 nav{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;justify-content:flex-end}
 nav a{
@@ -69,6 +77,20 @@ nav a{
   background:linear-gradient(to bottom,transparent,rgba(11,28,44,.55));
   pointer-events:none;
 }
+.hero-controls{
+  position:absolute;right:1rem;bottom:1rem;z-index:3;
+  display:flex;gap:.5rem;
+}
+.hero-btn{
+  appearance:none;border:1px solid rgba(255,255,255,.35);
+  background:rgba(11,28,44,.72);color:#fff;
+  font:600 .72rem Inter,system-ui,sans-serif;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.55rem .85rem;border-radius:2px;cursor:pointer;
+}
+.hero-btn:hover{background:rgba(11,28,44,.9);border-color:rgba(255,255,255,.55)}
+.hero-btn.is-hidden{display:none}
+.hero-btn[aria-pressed="true"]{border-color:#C41E3A;background:rgba(196,30,58,.85)}
 
 /* —— Shared section chrome —— */
 .wrap{width:min(1100px,calc(100% - 2.5rem));margin:0 auto}
