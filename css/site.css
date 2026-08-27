@@ -27,10 +27,19 @@ body{
   background:#0B1C2C;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
-.brand{display:flex;align-items:center;text-decoration:none;line-height:0}
-.brand img{
-  height:36px;width:auto;max-width:min(200px,55vw);
-  display:block;
+.brand{
+  display:flex;align-items:center;gap:.55rem;
+  text-decoration:none;line-height:0;color:#fff;
+}
+.brand-badge{
+  height:40px;width:40px;border-radius:50%;
+  display:block;object-fit:cover;
+  box-shadow:0 0 0 1px rgba(255,255,255,.12);
+}
+.brand-name{
+  font-family:Montserrat,Inter,system-ui,sans-serif;
+  font-weight:800;font-size:.88rem;letter-spacing:.08em;
+  text-transform:uppercase;line-height:1;
 }
 nav{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;justify-content:flex-end}
 nav a{
